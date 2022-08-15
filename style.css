@@ -1,45 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500&display=swap');
+
 *{
     margin:0;
     padding: 0;
     font-family: 'Yanone Kaffeesatz', sans-serif;
+    box-sizing: border-box;
 }
-
-
-.header{
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(9, 4, 30, 0.925),rgba(22, 3, 20, 0.377)),url("img/the-avengers-avengers-endgame-ant-man-avengers-endgame-black-widow-hd-wallpaper-preview.jpg");
-    background-position: center;
+body{
+    height: 100vh;
+    /* background-image: url("img/background.jpg"); */
+    background-image: linear-gradient(to right, rgba(9, 4, 30, 0.925),rgba(22, 3, 20, 0.1)),url("img/background.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
 }
-nav{
+
+/* HEADER */
+.header{
+    height: 8vh;
+    width: 100%;
+    padding: 0 8%;
+    /* background-color:rgba(238, 23, 31); */
+    background-color: #d11818e3;
     display: flex;
-    padding: 0.5% 4%;
     justify-content: space-between;
     align-items: center;
-    background-color:#f100009e;
 }
-nav img{
-    width: 120px
+.header a{
+    display: flex;
+    align-items: center;
+}
+#logo{
+    height: 6vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* MAIN SECTION */
+.main{
+    height: 92vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
 }
 .text-box{
-    width: 90%;
     color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: left;
-
+    /* color: rgb(210, 183, 253); */
+    flex-basis: 45%;
+    position: relative;
+    margin-left: 50px;
 }
 .text-box h1{
-    font-size: 60px;
+    font-size: 80px;
 }
 .text-box p{
-    margin: 10px 0 40px;
-    font-size: 20px;
-    color: rgb(210, 183, 253);
-
+    font-size: 25px;
+    font-weight: 300;
+    color: white;
+}
+#quote{
+    font-size: 30px;
+    font-weight: 500;
+}
+.text-box button{
+    border: none;
+    padding: 10px;
+    font-size: 25px;
+    background-color: #ee171f;
+    color: white;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+.text-box button:hover{
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    padding-left: 50px;
 }
