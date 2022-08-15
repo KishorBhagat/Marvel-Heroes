@@ -1,4 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500&display=swap');
+:root{
+    --red:#ff1a1a;
+}
+
+*{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border:none;
+    transition: all .3s cubic-bezier(.16,.8,.62,1.52);
+    text-transform: capitalize;
+    font-weight: normal;
+}
+
+*::selection{
+    background:var(--red);
+    color:#fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width:1.3rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:#000;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--red);
+}
 
 *{
     margin:0;
@@ -75,4 +116,74 @@ body{
     opacity: 1;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     padding-left: 50px;
+}
+
+/* EXPLORE SECTION */
+.gallery{
+    background:transparent;
+}
+
+.gallery .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery .box-container .box{
+    /* flex:1 1 30rem; */
+    flex:0 0 25%;
+    height:40rem;
+    overflow: hidden;
+    background:#333;
+    text-align: center;
+    padding:2rem;
+    margin:2rem;
+    border-radius: .5rem;
+    position: relative;
+}
+
+.gallery .box-container .box img{
+    height:100%;
+    object-fit: cover;
+}
+
+.gallery .box-container .box .info{
+    position: absolute;
+    bottom:-120%; left:50%;
+    transform: translateX(-50%);
+    width:80%;
+    background:#fff;
+    padding:2rem;
+    border:.3rem solid var(--red);
+    border-radius: .5rem;
+}
+
+.gallery .box-container .box:hover .info{
+    bottom:2rem;
+}
+
+.gallery .box-container .box:hover img{
+    transform: scale(1.2);
+}
+
+.gallery .box-container .box:hover{
+    background:#111;
+}
+
+.gallery .box-container .box .info h3{
+    background:var(--red);
+    color:#fff;
+    border-radius: .5rem;
+    margin:0 5rem;
+    margin-top: -3.7rem;
+    padding:.5rem 2rem;
+    font-size: 2.5rem;
+}
+
+.gallery .box-container .box .info p{
+    font-size: 2rem;
+    color:#666;
+    padding:.5rem;
+    padding-top: 2rem;
 }
